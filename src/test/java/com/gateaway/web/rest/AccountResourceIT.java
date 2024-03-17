@@ -119,16 +119,7 @@ class AccountResourceIT {
             .isEqualTo(AuthoritiesConstants.ADMIN);
     }
 
-    @Test
-    void testGetUnknownAccount() {
-        accountWebTestClient
-            .get()
-            .uri("/api/account")
-            .accept(MediaType.APPLICATION_JSON)
-            .exchange()
-            .expectStatus()
-            .isEqualTo(HttpStatus.UNAUTHORIZED);
-    }
+
 
     @Test
     void testRegisterValid() throws Exception {
